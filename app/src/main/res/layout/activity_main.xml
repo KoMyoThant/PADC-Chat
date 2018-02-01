@@ -28,16 +28,25 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:showIn="@layout/activity_main">
 
-        <EditText
-            android:id="@+id/et_search_chat"
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_search_chat"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/et_search_chat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_search_24dp"
+                android:drawablePadding="@dimen/margin_medium"
+                android:hint="Search..." />
+        </android.support.design.widget.TextInputLayout>
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/rv_chat_list"
+            android:id="@+id/rv_chat_mate_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/et_search_chat" />
+            android:layout_below="@id/til_search_chat" />
     </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>
