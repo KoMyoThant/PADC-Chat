@@ -37,6 +37,6 @@ public class ChatMateListAdapter extends BaseRecyclerAdapter<ChatMateViewHolder,
 
     @Override
     public int getItemCount() {
-        return 7;
+        return 0;
     }
 }

@@ -42,11 +42,17 @@
                 android:hint="Search..." />
         </android.support.design.widget.TextInputLayout>
 
-        <android.support.v7.widget.RecyclerView
+        <com.ps.padc_chat.components.SmartRecyclerView
             android:id="@+id/rv_chat_mate_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/til_search_chat" />
+
+        <include
+            android:id="@+id/vp_empty_chat_mate_list"
+            layout="@layout/view_pod_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>
