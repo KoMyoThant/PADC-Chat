@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.ps.padc_chat.R;
+import com.ps.padc_chat.data.vo.RegisterUserVO;
 import com.ps.padc_chat.delegates.ChatMateItemDelegate;
 import com.ps.padc_chat.viewholders.ChatMateViewHolder;
 
@@ -14,13 +15,14 @@ import com.ps.padc_chat.viewholders.ChatMateViewHolder;
  * Created by pyaesone on 2/1/18.
  */
 
-public class ChatMateListAdapter extends RecyclerView.Adapter {
+public class ChatMateListAdapter extends BaseRecyclerAdapter<ChatMateViewHolder,RegisterUserVO>{
 
     private Context mContext;
     private LayoutInflater mLayoutInflater;
     private ChatMateItemDelegate mChatMateItemDelegate;
 
     public ChatMateListAdapter(Context context, ChatMateItemDelegate chatMateItemDelegate) {
+        super(context);
         mContext = context;
         mLayoutInflater = LayoutInflater.from(mContext);
         mChatMateItemDelegate = chatMateItemDelegate;
@@ -31,11 +33,6 @@ public class ChatMateListAdapter extends RecyclerView.Adapter {
         View view = mLayoutInflater.inflate(R.layout.view_item_chat_mate, parent, false);
 
         return new ChatMateViewHolder(view, mChatMateItemDelegate);
-    }
-
-    @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-
     }
 
     @Override

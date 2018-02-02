@@ -4,14 +4,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ps.padc_chat.R;
-import com.ps.padc_chat.delegates.ChatBoxDelegate;
+import com.ps.padc_chat.delegates.ConversationDelegate;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -20,7 +19,7 @@ import butterknife.ButterKnife;
  * Created by pyaesone on 2/1/18.
  */
 
-public class ChatBoxActivity extends AppCompatActivity implements ChatBoxDelegate {
+public class ConversationActivity extends BaseActivity implements ConversationDelegate {
 
     @BindView(R.id.et_write_msg)
     EditText etWriteMsg;
@@ -32,7 +31,7 @@ public class ChatBoxActivity extends AppCompatActivity implements ChatBoxDelegat
     TextView tvSendMsg;
 
     public static Intent intent(Context context) {
-        Intent intent = new Intent(context, ChatBoxActivity.class);
+        Intent intent = new Intent(context, ConversationActivity.class);
 
         return intent;
     }

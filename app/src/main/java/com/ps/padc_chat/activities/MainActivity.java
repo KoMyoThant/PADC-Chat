@@ -1,7 +1,6 @@
 package com.ps.padc_chat.activities;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -13,7 +12,7 @@ import com.ps.padc_chat.delegates.ChatMateItemDelegate;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity implements ChatMateItemDelegate {
+public class MainActivity extends BaseActivity implements ChatMateItemDelegate {
 
     @BindView(R.id.rv_chat_mate_list)
     RecyclerView rvChatMateList;
@@ -33,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements ChatMateItemDeleg
 
     @Override
     public void onTapChatMate() {
-        Intent intent = ChatBoxActivity.intent(getApplicationContext());
+        Intent intent = ConversationActivity.intent(getApplicationContext());
         startActivity(intent);
     }
 }
